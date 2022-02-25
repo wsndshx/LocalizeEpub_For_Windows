@@ -1,0 +1,69 @@
+﻿<metro:MetroWindow x:Class="LocalizeEpub_For_Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LocalizeEpub_For_Windows" xmlns:iconPacks="clr-namespace:MahApps.Metro.IconPacks;assembly=MahApps.Metro.IconPacks.Unicons"
+                   mc:Ignorable="d"
+                   xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+                   xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="LocalizeEpub For Windows" Height="450" Width="800" TitleCharacterCasing="Normal">
+    <Grid>
+        <Grid x:Name="Grid_0" Background="Black" Opacity="0.4" Visibility="Visible">
+            <!--<Grid x:Name="Grid_0" Background="Black" Opacity="0.4" Visibility="Collapsed">-->
+            <Grid x:Name="Import" Height="205" Width="461" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Visible" MouseLeftButtonUp="Grid_MouseLeftButtonUp" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/背景图.png"/>
+                </Grid.Background>
+                <iconPacks:PackIconUnicons Height="60" Width="60" Kind="Export" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="White" Margin="200,42,201,103" />
+                <Label Content="打开或拖拽文件" HorizontalAlignment="Center" Margin="0,128,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Grid_1" Visibility="Collapsed">
+        <!--<Grid x:Name="Grid_1" Visibility="Visible">-->
+            <DataGrid x:Name="FileList" AutoGenerateColumns="False" IsReadOnly="True" CanUserReorderColumns="False" CanUserSortColumns="False" AreRowDetailsFrozen="True" HorizontalAlignment="Left" Width="260">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="状态" Binding="{Binding Status,UpdateSourceTrigger =Default}"/>
+                    <DataGridTextColumn Header="文件名" Binding="{Binding Name}"/>
+                    <!--<DataGridTextColumn Header="文件路径" Binding="{Binding Path}"/>-->
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBox x:Name="Log" Margin="260,217,0,0" TextWrapping="Wrap" Text=">_" Background="Black" Foreground="White" FontSize="16" FontWeight="Normal" DataContext="{Binding}" ScrollViewer.CanContentScroll="True" AllowDrop="False" IsReadOnly="True" TextChanged="Log_TextChanged"/>
+            <Grid Margin="260,0,0,0" Height="217" VerticalAlignment="Top">
+                <TabControl Style="{DynamicResource MahApps.Styles.TabControl.Animated}">
+                    <TabItem Header="繁化姬" IsSelected="True">
+                        <Grid Height="173" IsVisibleChanged="Fanhuaji_IsVisibleChanged" Tag="api.zhconvert.org">
+                            <!--下拉框-->
+                            <Label Content="转换模式：" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <ComboBox x:Name="Fanhuaji_mode" Margin="90,12,0,135" Height="20" Width="120" HorizontalAlignment="Left">
+                                <ComboBoxItem Content="简体化" Tag="Simplified"/>
+                                <ComboBoxItem Content="繁體化" Tag="Traditional"/>
+                                <ComboBoxItem Content="中国化" Tag="China"/>
+                                <ComboBoxItem Content="香港化" Tag="Hongkong"/>
+                                <ComboBoxItem Content="台灣化" Tag="Taiwan"/>
+                                <ComboBoxItem Content="火星化" Tag="Mars"/>
+                                <ComboBoxItem Content="维基简体化" Tag="WikiSimplified"/>
+                                <ComboBoxItem Content="維基繁體化" Tag="WikiTraditional"/>
+                            </ComboBox>
+                            <TextBlock FontSize="12" Margin="76,148,10,10">
+                                    当前页面的选项将使用「
+                                    <Hyperlink  NavigateUri="https://zhconvert.org" Cursor="Hand" Click="Hyperlink_Click">繁化姬</Hyperlink>
+                                    」提供的API服务，
+                                    <!--<LineBreak/>-->
+                                    <Run Foreground="Red" FontWeight="Bold" >如需商用请使用其他的翻译API</Run>
+                            </TextBlock>
+                            <Image HorizontalAlignment="Left" Height="18" Margin="10,147,0,0" VerticalAlignment="Top" Width="66" Source="/logo_h36.1306fa53.png" Stretch="Uniform"/>
+                            <Button x:Name="Fanhuaji_Start" Content="转换" HorizontalAlignment="Left" Margin="230,11,0,0" VerticalAlignment="Top" Click="Fanhuaji_Button_Click"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="腾讯云">
+                        <Grid Background="#FFE5E5E5">
+                            <Label Content="前面的区域, 以后再来探索吧" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </Grid>
+    </Grid>
+</metro:MetroWindow>

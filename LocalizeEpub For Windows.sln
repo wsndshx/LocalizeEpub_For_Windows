@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizeEpub For Windows", "LocalizeEpub For Windows.csproj", "{E612D0C3-A965-437C-AC64-8DFFD423BC49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E612D0C3-A965-437C-AC64-8DFFD423BC49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E612D0C3-A965-437C-AC64-8DFFD423BC49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E612D0C3-A965-437C-AC64-8DFFD423BC49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E612D0C3-A965-437C-AC64-8DFFD423BC49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0042E39B-72FB-419D-B457-8BECB908F0C9}
+	EndGlobalSection
+EndGlobal
