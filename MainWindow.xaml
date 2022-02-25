@@ -3,11 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:LocalizeEpub_For_Windows" xmlns:iconPacks="clr-namespace:MahApps.Metro.IconPacks;assembly=MahApps.Metro.IconPacks.Unicons"
+        xmlns:local="clr-namespace:LocalizeEpub_For_Windows"
                    mc:Ignorable="d"
                    xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
-                   xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        Title="LocalizeEpub For Windows" Height="450" Width="800" TitleCharacterCasing="Normal">
+                   xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" xmlns:iconPacks="clr-namespace:MahApps.Metro.IconPacks;assembly=MahApps.Metro.IconPacks.Unicons"
+                   Title="LocalizeEpub For Windows" Height="450" Width="800" TitleCharacterCasing="Normal">
     <Grid>
         <Grid x:Name="Grid_0" Background="Black" Opacity="0.4" Visibility="Visible">
             <!--<Grid x:Name="Grid_0" Background="Black" Opacity="0.4" Visibility="Collapsed">-->
